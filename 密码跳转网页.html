@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的幸运数字</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      .password-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .password-form input[type="password"] {
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      .password-form button {
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      .prompt-text {
+        color: red;
+        margin-bottom: 10px; /* 可选：设置与输入框之间的间距 */
+      }
+
+      .access-denied {
+        color: red;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      body {
+        /* ...其他样式... */
+        transition: background-color 1s ease; /* 背景颜色过渡效果，持续时间为1秒 */
+      }
+
+      body.bg-change {
+        background-color: #dad7e7; /* 新的背景颜色 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="password-form">
+      <p class="prompt-text">我的幸运数字是</p>
+      <input type="password" id="passwordInput" placeholder="请输入数字" />
+      <button onclick="checkPassword()">点击进入</button>
+    </div>
+    <div id="accessDenied" class="access-denied"></div>
+
+    <script>
+      function checkPassword() {
+        const correctPassword = "5"; // 设置正确的密码
+        const inputPassword = document.getElementById("passwordInput").value;
+
+        if (inputPassword === correctPassword) {
+          // 密码正确，跳转到网页内容或执行其他操作
+          alert("正确的，欢迎欢迎！");
+          // 这里可以添加跳转到真正网页内容的代码，例如：window.location.href = "your_webpage_content.html";
+          window.location.href =
+            "https://space.bilibili.com/501536159?spm_id_from=333.1365.0.0";
+        } else {
+          // 密码错误，显示错误信息
+          document.getElementById("accessDenied").textContent =
+            "猜错了，不妨再猜一次）。";
+        }
+      }
+      window.onload = function () {
+        // 等待页面加载完成后改变背景颜色
+        document.body.classList.add("bg-change");
+      };
+    </script>
+  </body>
+</html>

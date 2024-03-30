@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>种族设定</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        overflow-x: auto; /* 允许水平滚动，通常只在需要时设置 */
+        overflow-y: hidden; /* 防止垂直滚动 */
+      }
+
+      .shell {
+        height: 100vh;
+        display: flex;
+      }
+
+      .box {
+        flex: 1;
+        min-width: 0;
+        box-shadow: -20px 0 20px 5px rgba(255, 255, 255, 0.7);
+        transition: flex 0.8s;
+        background-size: cover;
+        background-position: center;
+        display: grid;
+        place-items: center;
+        border: 10px solid #fff;
+      }
+
+      .box:hover {
+        flex: 2;
+      }
+
+      .box:hover .text {
+        animation: appear 0.8s forwards 0.3s;
+      }
+
+      .img1 {
+        background-image: url(./assets/images/01.png);
+      }
+
+      .img2 {
+        background-image: url(./assets/images/02.png);
+      }
+
+      .img3 {
+        background-image: url(./assets/images/03.png);
+      }
+
+      .img4 {
+        background-image: url(./assets/images/04.png);
+      }
+      .img5 {
+        background-image: url(./assets/images/05.png);
+      }
+      .img6 {
+        background-image: url(./assets/images/06.png);
+      }
+
+      .text {
+        padding: 45px 75px;
+        opacity: 0;
+        color: rgb(255, 255, 255);
+        height: 380px;
+        width: 600px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      header {
+        height: 73px;
+        font-size: 65px;
+        font-family: 华文中宋;
+        line-height: 65px;
+        font-weight: bold;
+        border-bottom: 2px solid white;
+      }
+
+      .title {
+        display: inline-block;
+        height: 65px;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        text-decoration-thickness: 4px;
+      }
+
+      .num {
+        margin-left: -18px;
+      }
+
+      .text {
+        margin: 30px 0;
+        font-size: 25px;
+      }
+
+      .human {
+        margin: 30px 0;
+        font-size: 20px;
+      }
+      /* 人族字体 */
+
+      .shengwu {
+        margin: 15px 0;
+        font-size: 20px;
+      }
+      @keyframes appear {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="shell">
+      <div class="box img1">
+        <div class="text">
+          <header>
+            <span class="title">1.人族</span>
+          </header>
+          <p class="human">
+            占据大陆绝大多数的土地。而在遥远的黑暗年代，无数人类族群为了生存与资源而争斗不休。这是一个被战争、饥饿和疾病笼罩的时代。各别强大的魔法师会为了换取所谓的“神力”，进行惨无人道的的血祭、兽人族凭借着他们强大的肉体和野蛮的本性，不断侵袭人类的领地。精灵们对人类的偏见也时常发动攻击。直到帝皇的出现，建立了一统的人类帝国情况才相对好转。帝皇的具体名字已无从考证、但他绝对是那个年代最强大的魔法师和骑士。他与矮人族建立的深厚友谊一直延续至如今的人类帝国。
+          </p>
+        </div>
+      </div>
+      <div class="box img2">
+        <div class="text">
+          <header>
+            <span class="title">2.矮人族</span>
+          </header>
+          <p>
+            源自古老的山脉深处，是大地与岩石的子孙，他们身材矮小却体格健壮。矮人族崇尚锻造和建筑，以成为技艺高超的贤者为荣，精通各种金属的冶炼和加工。在矮人族的信仰中有两位主要的神明、一个是大地之母盖娅、另一个则是锻造之神赫尔流斯。
+          </p>
+        </div>
+      </div>
+      <div class="box img3">
+        <div class="text">
+          <header>
+            <span class="title">3.精灵族</span>
+          </header>
+          <p>
+            起源于远古的森林之中，他们的寿命远超其他种族（龙族除外），种群繁多，除非有亡族灭种的事件，不同种群之间很少有交流。对人类态度处于中立，不过任何擅自闯入其领地者都会被其当场格杀或者成为其奴隶。
+          </p>
+        </div>
+      </div>
+      <div class="box img4">
+        <div class="text">
+          <header>
+            <span class="title">4.兽人族</span>
+          </header>
+          <p>
+            起源于蛮荒之地，他们拥有着强健的体魄、锐利的爪牙和狂野的战斗本能。视战斗为荣誉的象征，认为只有在战斗中才能证明自己的价值。社会结构以部落为单位，每个部落都有一位强大的酋长领导。视人族为软弱而虚伪的种族，在黑暗时代层多次入侵人类的领土，俩族之间长期处于敌对关系。
+          </p>
+        </div>
+      </div>
+      <div class="box img5">
+        <div class="text">
+          <header>
+            <span class="title">5.龙族</span>
+          </header>
+          <p>
+            龙族，是这片古老大陆上的神秘种族，传说中，龙族是由创世神祇的一缕气息所化。他们天生便对魔法有着强大的亲和力，一头幼龙便能释放只有人类高阶法师才有能力释放的法术。而一些活了漫长岁月的古龙，因其内在强大魔法能量，周身往往会不受控制地伴随着天灾。然而，也是因为龙族体内魔法能量的过于强大和不稳定，在其生育过程中往往会有魔法能量的巨大消耗与潜在的生命危险。因此，龙族一直是个体稀少的种族。
+          </p>
+        </div>
+      </div>
+      <div class="box img6">
+        <div class="text">
+          <header>
+            <span class="title">6.未知生物</span>
+          </header>
+          <p class="shengwu">
+            在这片广袤无垠的大陆上，除了已知的种族外，还隐藏着许多神秘莫测的未知生物。它们或来自深邃的地下世界，或从空间通道出来的异世界旅客，或是从死亡的阴影中复苏的亡灵生物。
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
